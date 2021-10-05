@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+        <i class="fa fa-book fa-2x"></i>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/" style="color: rgb(6, 202, 216);">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/" style="color:rgb(6, 202, 216); margin-left: 990px;">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="row" style="padding: 50px;">
+    <div class="col-xl-6 center">
+        <div class="card">
+            <div class="card-header bg-transparent">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h3 class="mb-0">Table des livres</h3>
+                 </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="table-responsive">
+                       <img  *ngIf="!datalist" src="../assets/image/img1.gif"> 
+                      <table *ngIf="datalist" class="table table-bordered table-striped custom-table datatable mb-0">
+                                <thead>
+                                  <tr>
+                                    <th>Référence</th>
+                                    <th>Nom de livre</th>
+                                    <th>Auteur</th>
+                                  </tr>
+                                </thead>
+                            <tbody>
+                                <tr *ngFor="let item of datalist">
+                                    <td><strong>{{item.reference}}</strong></td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.auteur}}</td>
+                                </tr>
+                            </tbody>
+                      </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+    
+
+

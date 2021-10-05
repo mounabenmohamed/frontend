@@ -1,0 +1,32 @@
+.row{
+   padding: 50px;
+    margin : center;
+    margin-left: 150px;
+} 
+.form-group{
+    margin-left: 30px;
+}
+.card-body{
+    margin: 1px;
+    background-color: rgb(232, 236, 236);
+}
+label{
+    text-align: justify;
+    color: rgb(6, 202, 216);
+}
+h3{
+    color: rgb(6, 202, 216);
+    margin-left: 10px;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.5;
+}
+button{
+   color: rgb(232, 236, 236); 
+    background-color:  rgb(6, 202, 216);;
+}
+i{
+    color: lavenderblush;
+    margin: 4px;
+}
+

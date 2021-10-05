@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+        <i class="fa fa-book fa-2x"></i>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/" style="color: rgb(6, 202, 216);">Home </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/" style="color:rgb(6, 202, 216); margin-left: 990px;">Logout</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+<div class="row">
+    <div class="col-xl-6 center">
+        <div class="card">
+           <div class="card-body">
+               <form  autocomplete="off" (ngSubmit)="submit()"  [formGroup]="form">
+                    <div class="text-center text-muted mb-4">
+                        <h3>Create your account</h3>
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="name">Name</label> 
+                        <input placeholder="Entrer Name" formControlName="name" name="name" type="text" class="form-control" [ngClass]="{'is-invalid' : submitted && f.name.errors}">
+                    
+                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                            <div *ngIf="f.name.errors.required"> Name is required </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="email">Email</label> 
+                        <input placeholder="Entrer Email" formControlName="email" name="email" type="text" class="form-control" [ngClass]="{'is-invalid' : submitted && f.email.errors} " >
+
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required"> Email is required </div>
+                            <div *ngIf="f.email.errors.email"> Email must be a valid email address </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="name">N° Téléphone</label> 
+                        <input placeholder="Entrer Numéro" formControlName="num_telephone" name="num_telephone" type="text" class="form-control" [ngClass]="{'is-invalid' : submitted && f.num_telephone.errors}">
+                    
+                        <div *ngIf="submitted && f.num_telephone.errors" class="invalid-feedback">
+                            <div *ngIf="f.num_telephone.errors.required"> Numéro is required </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="password">Password</label> 
+                        <input placeholder="Entrer Password" formControlName="password"  name="password" type="password" class="form-control" [ngClass]="{'is-invalid' : submitted && f.password.errors}">
+
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required"> Password is required </div>
+                            <div *ngIf="f.password.errors.minlength"> Password must be atleast 6 characters</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="confirm_password">Confirm Password</label> 
+                        <input placeholder="Entrer Confirm Password" formControlName="confirmPassword" name="confirm_password" type="password" class="form-control" [ngClass]="{'is-invalid' : submitted && f.confirmPassword.errors}" >
+                            
+                           <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                             <div *ngIf="f.confirmPassword.errors.required"> Confirm Password is required </div>
+                             <div *ngIf="f.confirmPassword.errors.mustMatch"> Password must match</div>
+                           </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn my-4">S'inscrire</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
