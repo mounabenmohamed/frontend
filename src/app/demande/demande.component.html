@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+    </head>
+
+       <body id="page-top">
+           <div id="wrapper">
+               <!-- Sidebar -->
+                       <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                         <!-- Sidebar - Brand -->
+                         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+                          <div class="sidebar-brand-icon rotate-n-15">
+                             <img  src="assets/image/img0.jpg" class="navbar-brand-img">
+                            </div>
+                            <div class="sidebar-brand-text mx-3" style="font-style: italic;">Online Library</div>
+                         </a>
+                         <!-- Divider -->
+                           <hr class="sidebar-divider my-2">
+                           <!-- Nav Item - Dashboard -->
+                                <li class="nav-item active ">
+                                  <a class="nav-link" href="" style="margin-top: 20px;">
+                                  <i class="fa fa-tachometer "></i>
+                                 <span>Dashboard</span></a>
+                                </li>
+
+                                 <!-- Divider -->
+                            <hr class="sidebar-divider">
+
+                                <li class="nav-item">
+                                   <a class="nav-link collapsed" href="table">
+                                      <i class="fa fa-table"></i>
+                                     <span style="font-size: 16px; margin-left: 5px;">Table des livres</span>
+                                    </a>
+                                </li>
+                               <li class="nav-item">
+                                   <a class="nav-link collapsed" href="demande">
+                                     <i class="fa fa-book " ></i>
+                                     <span style="font-size: 16px; margin-left: 5px;">Demande un livre</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link collapsed" >
+                                      <i class="fa fa-file" ></i>
+                                      <span style="font-size: 16px; margin-left: 5px;">livres proposés</span>
+                                     </a>
+                                      <div >
+                                          <a class="collapse-item" href="create" style="margin-left: 30px; color: #cdcdd4;"><i class="fa fa-plus" ></i>  Ajouter <br></a>
+                                          <a class="collapse-item" href="delete" style="margin-left: 30px; color: #cdcdd4;"><i class="fa fa-align-justify" ></i>  Liste </a>
+                                      </div>
+                                  </li>
+                    
+                             </ul>
+        
+                            <!-- Content Wrapper -->
+                            <div id="content-wrapper" class="d-flex flex-column">
+                                <div id="content">
+                                      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                                    <ul class="navbar-nav ml-auto">
+                                      <div class="topbar-divider d-none d-sm-block"></div>
+
+                                     <!-- Nav Item - User Information -->
+                                      <li class="nav-item dropdown no-arrow">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                           <img class="img-profile rounded-circle" src="assets/image/img1.png">
+                                        </a>
+                                       </li>
+                                    </ul>
+
+                                    </nav>
+                                 <!-- Begin Page Content -->
+                                   <div class="container-fluid">
+                                     <div class="row" style="margin-left: 100px;">
+                                       <!-- <div class="col-lg-6"> -->
+                                       <div class="col-xl-6">
+                                       <!-- Background Gradient Utilities -->
+                                      <div class="card shadow mb-4 ">
+                                      <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Demande un livre</h6>
+                                      </div>
+                                       <div class="card-body">
+                                         <div class="input-group input-group-merge input-group-alternative">
+                                           <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="fa fa-book" ></i></span>
+                                            </div>
+                                            <select name="patient" class="form-control" id="livre" #livre>
+                                                <option  value="">Choisir un livre</option>
+                            
+                                                <option *ngFor="let item of datalist" value="{{item.reference}}">{{item.name}}</option>
+                                             @endforeach
+                                            </select>
+                                         </div>
+                                         <div class="text-center">
+                                           <button type="submit" class="btn btn-primary my-4" (click)="insertLivre(livre.value)" > Envoyer</button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </body>
+</html>

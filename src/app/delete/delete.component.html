@@ -1,10 +1,9 @@
 <!DOCTYPE html>
- <html lang="en">
-      <head></head>
-
+  <html lang="en">
+    <head>
+       </head>
    <body id="page-top">
-
-    <!-- Page Wrapper -->
+     
     <div id="wrapper">
 
         <!-- Sidebar -->
@@ -36,24 +35,26 @@
                     <i class="fa fa-table"></i>
                     <span style="font-size: 16px; margin-left: 5px;">Table des livres</span>
                 </a>
-             </li>
-             <li class="nav-item">
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="demande">
                     <i class="fa fa-book " ></i>
                     <span style="font-size: 16px; margin-left: 5px;">Demande un livre</span>
                 </a>
-             </li>
-                <li class="nav-item">
-                  <a class="nav-link collapsed" >
-                    <i class="fa fa-file" ></i>
-                    <span style="font-size: 16px; margin-left: 5px;">livres proposés</span>
-                   </a>
-                    <div >
-                        <a class="collapse-item" href="create" style="margin-left: 30px; color: #cdcdd4;"><i class="fa fa-plus" ></i>  Ajouter <br></a>
-                        <a class="collapse-item" href="delete" style="margin-left: 30px; color: #cdcdd4;"><i class="fa fa-align-justify" ></i>  Liste </a>
-                    </div>
-                </li>
-            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" >
+                  <i class="fa fa-file" ></i>
+                  <span style="font-size: 16px; margin-left: 5px;">livres proposés</span>
+                 </a>
+                  <div >
+                      <a class="collapse-item" href="create" style="margin-left: 30px; color: #cdcdd4;"><i class="fa fa-plus" ></i>  Ajouter <br></a>
+                      <a class="collapse-item" href="delete" style="margin-left: 30px; color: #cdcdd4;"><i class="fa fa-align-justify" ></i>  Liste </a>
+                  </div>
+              </li>
+                    
+        </ul>
+        
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
@@ -74,9 +75,47 @@
 
                 </nav>
                 <!-- Begin Page Content -->
-           
+                    <div class="container-fluid">
+                       <div class="row" style="margin-left: 100px;">
+                         <!-- <div class="col-lg-6"> -->
+                        <div class="col-xl-6">
+
+                         <!-- Background Gradient Utilities -->
+                </div>
             </div>
+            <div class="container-fluid col-9" style="margin-left: 4px;">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Liste des livres</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Nom de livre</th>
+                                        <th>Auteur</th>
+                                        <th>Action</th>
+                                     </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of livresProposes">
+                                        <td><strong>{{item.nom_livre}}</strong></td>
+                                        <td>{{item.nom_auteur}}</td>
+                                        <td><button class="btn btn-danger btn-sm" (click)="deleteData(item.id)">Delete</button></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
+    </div>
+    </div>
+</div>
+</body>
+
 </html>
+
+

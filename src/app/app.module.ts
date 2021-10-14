@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { Router, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { DemandeComponent } from './demande/demande.component';
+import { CreateComponent } from './create/create.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 @NgModule({
@@ -21,6 +24,10 @@ import { AuthGuard } from './auth.guard';
     TableComponent,
     RegisterComponent,
     HomeComponent,
+   
+    DemandeComponent,
+    CreateComponent,
+    DeleteComponent,
      
   ],
   imports: [
